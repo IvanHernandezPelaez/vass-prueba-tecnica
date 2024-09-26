@@ -1,0 +1,115 @@
+a {
+    text-decoration: none;  
+    
+  } 
+
+.navLink {
+    color: #ffffff;    
+    padding: 0 10px; 
+  }
+  
+  .navLink:hover {
+    color: #ccc; 
+    
+  }
+  
+  .navbarBrand {
+    color: #fff;
+    margin-right: 20px; 
+  }
+  
+  .dropdownMenu {
+    background-color: #343a40; 
+  }
+  
+  .dropdownItem {
+    color: #fff;    
+  }
+  
+  .dropdownItem:hover {
+    color: #ccc;    
+    
+  }  
+  
+.logo {
+    height: 20px; 
+    width: auto;  /* Permite que la imagen mantenga la proporción */
+  }  
+
+/* Estilo para el hero con la imagen de fondo */
+.heroSection {
+    background-image: url('../../imagenes/fondo-header.png'); /* Ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Ajusta la altura según necesites */
+    background-repeat: no-repeat;    
+    width: 100%;  /* Asegura que la imagen cubra todo el ancho */
+    display: flex;  /* Flex para alinear el contenido */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo del navbar cuando está transparente */
+  .navbar-transparent {    
+    background: transparent; 
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo del navbar cuando el usuario hace scroll */
+  .navbar-dark.bg-dark {    
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  /* Estilos para la lupa y hamburguesa en pantallas pequeñas */
+.iconButton {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (max-width: 991px) {
+    /* Mostrar la lupa junto al botón de hamburguesa en pantallas pequeñas */
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.9) !important;  /* Navbar siempre negro en pantallas pequeñas */        
+    }
+    
+    .largeScreenIcon {
+      display: none;
+      
+    }
+  
+    .iconButton {
+      display: flex; /* Mostrar la lupa al lado de la hamburguesa */
+    }
+
+    .heroSection {
+        height: 300px; /* Ajustar la altura en pantallas pequeñas */
+        background-position: top; /* Mueve la imagen un poco hacia arriba en pantallas pequeñas */
+      }
+  }
+
+  
+  @media (min-width: 992px) {
+    /* Mostrar la lupa entre "EN" y "Talento" en pantallas grandes */    
+    .largeScreenIcon {
+      display: inline-block;
+      margin-right: 0px; /* Ajusta el espacio entre la lupa y "Talento" */
+    }
+  
+    .iconButton {
+      display: none; /* Esconder la lupa del lado de la hamburguesa */
+    }
+
+    .heroSection {
+        height: 500px; /* Altura original para pantallas grandes */
+        background-size: cover;
+        background-position: center;
+    }
+
+
+  }
