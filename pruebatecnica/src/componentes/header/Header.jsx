@@ -9,37 +9,38 @@ const Header = () => {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 991);
 
-  // Función para manejar scroll y resize
+  
   const handleResizeAndScroll = () => {
     const smallScreen = window.innerWidth <= 991;
     setIsSmallScreen(smallScreen);
 
     if (!smallScreen) {
-      setNavbarScrolled(window.scrollY > 50); // Si no es pantalla pequeña, aplica scroll para cambiar el fondo
+      setNavbarScrolled(window.scrollY > 50); 
     } else {
-      setNavbarScrolled(true); // En pantallas pequeñas, el navbar siempre es negro
+      setNavbarScrolled(true); 
     }
   };
 
   useEffect(() => {
-    // Detectar scroll y resize
+    
     window.addEventListener("scroll", handleResizeAndScroll);
     window.addEventListener("resize", handleResizeAndScroll);
 
-    // Limpieza al desmontar el componente
+    
     return () => {
       window.removeEventListener("scroll", handleResizeAndScroll);
       window.removeEventListener("resize", handleResizeAndScroll);
     };
-  }, []);  
+  }, []);
 
   return (
-    <header>
-      {/* Imagen de fondo con el texto "CONTACTO" */}
+    <header>      
       <div className={Styles.heroSection}>
         <nav
           className={`navbar navbar-expand-lg fixed-top ${
-            isSmallScreen || navbarScrolled ? "navbar-dark bg-dark" : "navbar-transparent"
+            isSmallScreen || navbarScrolled
+              ? "navbar-dark bg-dark"
+              : "navbar-transparent"
           }`}
         >
           <div className="container-fluid">
@@ -47,12 +48,12 @@ const Header = () => {
               <img src={logo} alt="Logo vass" className={Styles.logo} />
             </a>
             <div className="d-flex align-items-center">
-              {/* Icono de lupa */}
+              
               <button className={Styles.iconButton}>
                 <IoIosSearch size={24} color="#FFFFFF" />
               </button>
 
-              {/* Botón de hamburguesa */}
+              
               <button
                 className="navbar-toggler"
                 type="button"

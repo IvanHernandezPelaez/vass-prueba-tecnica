@@ -1,0 +1,176 @@
+.footer {
+  background-color: #181414; 
+  color: #ffffff; 
+  border-top: 1px solid #ffffff;
+}
+
+.footer .socialIcons a {
+  color: #ffffff !important; 
+}
+
+
+.footer .text-center {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #ffffff !important; 
+  text-decoration: none;
+}
+
+.text {
+  text-align: right; 
+  float: right; 
+  padding-right: 40px; 
+  margin-bottom: 50px; 
+  border-right: 10px solid transparent; 
+}
+
+/* Alineación a la izquierda en pantallas mayores a 768px */
+@media (min-width: 768px) {
+  .text {
+    text-align: left; 
+    float: none; 
+    padding-left: 0; 
+    margin-left: 0;
+    margin-top: 0;
+    width: 15%;
+    
+  }
+}
+
+.text p {
+  margin: 0; 
+  line-height: 1; 
+  font-size: 20px; 
+  font-weight: bold; 
+}
+
+h5 {
+  font-weight: bold; 
+}
+
+
+.navItem {
+  line-height: 1.5 !important; 
+}
+
+.section1 {
+  padding-left: 30px; 
+  border-left: 0px solid; 
+}
+
+.section1 h5 {
+  margin-left: -10px; 
+}
+
+.footerLogo {
+  display: block;
+  margin: 0 0 20px auto; 
+  width: 70px; 
+  padding-right: 10px;
+}
+
+.certificacionFooter {
+  display: block;
+  margin: 0 auto;
+  width: 90px; 
+  padding-top: 0px;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+}
+
+
+
+.politicaLinks {
+  margin: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 0; 
+  margin-top: 50px !important; 
+  margin-bottom: 50px; 
+}
+
+.politicaLinks a {
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-bottom: 5px; 
+}
+
+.politicaLinks a:nth-child(3), 
+.politicaLinks a:nth-child(4) { 
+  display: block; 
+  width: 100%; 
+  text-align: center; 
+  margin: 0 auto; 
+}
+
+.politicaLinks a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .politicaLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footerLogo,
+  .certificacionFooter {
+    display: none; 
+  }
+
+  .text {
+    text-align: right; 
+    float: right;
+    padding-right: 40px;
+    padding-left: 0;
+    border-right: 10px solid transparent;
+  }
+}
+
+/* Para pantallas grandes (768px y superiores), mostrar las imágenes */
+@media (min-width: 768px) {
+  .footerLogo,
+  .certificacionFooter {
+    display: block; 
+  }
+
+  
+  .row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+  }
+
+  .text {
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 0;
+  }
+}
+
+/* Para pantallas mayores a 768px */
+@media (min-width: 1024px) {
+  .row {
+    justify-content: space-around; 
+  }
+}
